@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+.im1{
+  height:180px;
+  width:205px;
+  margin:0px 12px;
+  border:7px solid blue;
+  border-radius:20px;
+}
+#bim1{
+height:330px;
+width:960px;
+margin:6px 12px;
+border:7px solid blue;
+border-radius:20px;
+}
+</style>
+<script>
+function gallery(x)
+{
+  var path=x.src;
+  document.getElementById("bim1").src=path;
+  x.style.border="7px solid aqua";
+}
+function demo(x)
+{
+   document.getElementById("bim1").src="images/p1.jpg";
+   x.style.border="7px solid blue";
+}
+</script>
+</head>
+<body>
+<center><h1><u>IMAGE GALLERY</u></h1></center>
+<br/>
+<img src="images/p5.jpg" onmouseleave="demo(this)" onmouseover="gallery(this)" class="im1"/>
+<img src="images/p2.jpg" onmouseleave="demo(this)" onmouseover="gallery(this)" class="im1"/>
+<img src="images/p3.jpg" onmouseleave="demo(this)" onmouseover="gallery(this)" class="im1"/>
+<img src="images/p4.jpg" onmouseleave="demo(this)" onmouseover="gallery(this)" class="im1"/>
+<img src="images/p1.jpg" id="bim1"/>
+</body>
+</html>

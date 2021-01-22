@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+function demo()
+ {
+    var n1=document.getElementById("txt1");
+	var n2=document.getElementById("txt2");
+	var sum=parseInt(n1.value)+parseInt(n2.value);
+	var showres=document.getElementById("h1");
+	showres.innerHTML="<u><mark>"+sum+"</mark></u>";
+ }
+</script>
+</head>
+<body>
+<input type="text" id="txt1"/><br/><br/>
+<input type="text" id="txt2"/>
+<h1 id="h1"></h1>
+<br/><br/>
+<button onclick="demo()">RESULT</button>
+</body>
+</html>

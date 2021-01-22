@@ -1,0 +1,47 @@
+<html>
+<head>
+<style>
+.im1{
+height:220px;
+width:200px;
+border:7px solid hotpink;
+padding:10px;
+box-shadow:0px 0px 3px 4px black inset;
+margin:3px;
+}
+#bimg{
+height:320px;
+width:920px;
+border:7px solid lime;
+padding:10px;
+box-shadow:0px 0px 3px 4px black inset;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$(".im1").mouseenter(function(){
+var path=$(this).attr("src");
+$("#bimg").attr("src",path);
+$(this).css("border","7px solid purple");
+})
+
+$(".im1").mouseleave(function(){
+$("#bimg").attr("src","images/p5.jpg");
+$(this).css("border","7px solid hotpink");
+})
+
+})
+</script>
+</head>
+<body>
+<center>
+<br/><br/><br/><br/><br/>
+<img src="images/p5.jpg" id="bimg"/><br/><br/>
+<img src="images/p1.jpg" class="im1"/>
+<img src="images/p2.jpg" class="im1"/>
+<img src="images/p3.jpg" class="im1"/>
+<img src="images/p4.jpg" class="im1"/>
+</center>
+</body>
+</html>

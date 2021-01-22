@@ -1,0 +1,41 @@
+<html>
+<head>
+<style>
+#box1{
+height:300px;
+width:300px;
+background:purple;
+float:left;
+display:none;
+}
+#box2{
+height:300px;
+width:300px;
+background:navy;
+float:left;
+margin:0px 10px;
+display:none;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("#box2").hide("fast");
+$("#box1").show("fast");
+})
+
+$("#btn2").click(function(){
+$("#box1").hide("fast");
+$("#box2").show("fast");
+})
+})
+</script>
+</head>
+<body>
+<div id="box1"></div>
+<div id="box2"></div>
+<button id="btn1">REGISTRATION</button>
+<button id="btn2">LOGIN</button>
+</body>
+</html>

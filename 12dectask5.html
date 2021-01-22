@@ -1,0 +1,54 @@
+<html>
+<head>
+<style>
+
+#box{
+min-height:260px;
+width:600px;
+background:purple;
+color:white;
+margin:20px auto;
+padding:30px;
+text-align:justify;
+font-size:22px;
+}
+img{height:200px;width:600px;border:5px solid maroon;padding:20px;box-shadow:0px 0px 5px 6px black inset;}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("#box").append("<h2>Hii This is append function.....</h2>");
+})
+
+$("#btn2").click(function(){
+$("#box").prepend("<h2>Hii This is prepend function.....</h2>");
+})
+
+$("#btn3").click(function(){
+$("#box").after("<h1>Hii This is after function.....</h1>");
+$("#box").after("<img src='images/p5.jpg'/>");
+})
+
+$("#btn4").click(function(){
+$("#box").before("<h1>Hii This is before function.....</h1>");
+})
+})
+</script>
+</head>
+<body>
+<center>
+<div id="box">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+</div>
+<button id="btn1">append</button>
+<button id="btn2">prepend</button>
+<button id="btn3">after</button>
+<button id="btn4">before</button>
+
+</center>
+</body>
+</html>

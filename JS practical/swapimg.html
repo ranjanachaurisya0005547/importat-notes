@@ -1,0 +1,31 @@
+<html>
+<head>
+ <script>
+    function swapimg()
+	{
+	  var im1=document.getElementById("img1");
+	  var im2=document.getElementById("img2");
+	  var path1=im1.src;
+	  var path2=im2.src;
+	  im1.src=path2;
+	  im2.src=path1;
+	  
+	}
+	/*
+	Syntax:
+	window.setInterval("Function_name()",time_in_milisecond);
+	window.setInterval(Function_name,time_in_milisecond);
+	syntax:
+	window.setTimeout("Function_name()",time_in_milisecond);
+	window.setTimeout(Function_Name,time_in_milisecond);
+	*/
+	window.setInterval(swapimg,1000);
+ </script>
+</head>
+<body>
+  <img src="images/p1.jpg" id="img1" height="300px"/>
+  <img src="images/p2.jpg" id="img2" height="300px"/>
+  <br/><br/>
+ <!-- <button onclick="swapimg()">CHANGE IMAGE</button>-->
+</body>
+</html>

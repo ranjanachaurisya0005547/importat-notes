@@ -1,0 +1,36 @@
+<html>
+<head>
+<style>
+h1{
+ background:navy;
+ color:white;
+ border:10px solid cyan;
+}
+h2{
+ background:purple;
+ color:#ddd;
+ border:10px solid lime;
+}
+</style>
+<script>
+function demo()
+{
+ var h1=document.getElementById("h1");
+ var h2=document.getElementById("h2");
+ 
+ var txt1=h1.innerText;
+ var txt2=h2.innerText;
+ 
+ h1.innerText=txt2;
+ h2.innerText=txt1;
+}
+setInterval("demo()",2000);
+</script>
+</head>
+<body>
+<h1 id="h1">WELCOME TO THE WORLD OF JS</div>
+<h2 id="h2">WELCOME TO TECHILE TECHNOLOGY PVT. LTD.</h1>
+<!--<button onclick="demo()">GET/SET</button>-->
+
+</body>
+</html>

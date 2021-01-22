@@ -1,0 +1,44 @@
+<html>
+<head>
+<script>
+function calculator(n1,n2,op)
+{
+  var res=document.getElementById("res");
+  switch(op.value)
+  {
+   case "+":res.value=n1+n2;
+   break;
+   case "-":res.value=n1-n2;
+   break;
+   case "*":res.value=n1*n2;
+   break;
+   case "/":res.value=n1/n2;
+   break;
+   case "%":res.value=n1%n2;
+   break;
+   default:alert("Please Enter A Valid Operator !");
+  }
+}
+</script>
+</head>
+<body>
+First Number:<br/>
+<input type="text" id="txt1"/><br/>
+Second Number:<br/>
+<input type="text" id="txt2"/><br/>
+RESULT<br/>
+<input type="text" id="res"/><br/>
+<br/>
+<input type="button" value="+" 
+onclick="calculator(Number(document.getElementById('txt1').value),Number(document.getElementById('txt2').value),this)"/>
+<input type="button" value="-" 
+onclick="calculator(Number(document.getElementById('txt1').value),Number(document.getElementById('txt2').value),this)"/>
+<input type="button" value="*" 
+onclick="calculator(Number(document.getElementById('txt1').value),Number(document.getElementById('txt2').value),this)"/>
+<input type="button" value="/" 
+onclick="calculator(Number(document.getElementById('txt1').value),Number(document.getElementById('txt2').value),this)"/>
+<input type="button" value="%" 
+onclick="calculator(Number(document.getElementById('txt1').value),Number(document.getElementById('txt2').value),this)"/>
+
+</body>
+</html>

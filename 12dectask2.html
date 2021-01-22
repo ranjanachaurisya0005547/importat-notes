@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+#box{
+height:300px;
+width:500px;
+margin:20px auto;
+background:white;
+padding:30px;
+box-shadow:0px 0px 5px 6px pink inset;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("img").slideUp("fast");
+})
+
+$("#btn2").click(function(){
+$("img").slideDown("fast");
+})
+
+$("#btn3").click(function(){
+$("img").slideToggle("fast");
+})
+})
+</script>
+</head>
+<body>
+<div id="box"></div>
+<center>
+<button id="btn1">slideUp</button>
+<button id="btn2">slideDown</button>
+<button id="btn3">slideToggle</button>
+</center>
+</body>
+</html>

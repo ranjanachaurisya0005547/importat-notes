@@ -1,0 +1,55 @@
+<html>
+<head>
+<style>
+#box{
+height:300px;
+width:400px;
+background:lime;
+border:5px double purple;
+padding:20px;
+margin:20px 40px;
+float:left;
+}
+img{
+height:300px;
+width:400px;
+border:10px double maroon;
+padding:20px;
+float:right;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("#box").fadeIn("fast");
+$("img").fadeIn("slow");
+})
+
+$("#btn2").click(function(){
+$("#box").fadeOut(2000);
+$("img").fadeOut(3000);
+})
+
+$("#btn3").click(function(){
+$("#box").fadeToggle(3000);
+$("img").fadeToggle(4000);
+})
+
+$("#btn4").click(function(){
+$("#box").fadeTo(2000,.3);
+$("img").fadeTo(3000,.2);
+})
+})
+</script>
+</head>
+<body>
+<div id="box"></div>
+<img src="images/p5.jpg">
+<br/><br/><br/>
+<button id="btn1">fadeIn</button>
+<button id="btn2">fadeOut</button>
+<button id="btn3">fadeToggle</button>
+<button id="btn4">fadeTo</button>
+</body>
+</html>

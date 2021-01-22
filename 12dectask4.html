@@ -1,0 +1,27 @@
+<html>
+<head>
+<style>
+#box{
+height:100px;
+width:100px;
+background:maroon;
+position:absolute;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$("#box").animate({right:"0px"},2000);
+$("#box").delay(6000).animate({bottom:"0px"},2000);
+$("#box").animate({left:"0px"},2000);
+$("#box").animate({top:"0px"},2000);
+})
+})
+</script>
+</head>
+<body>
+<button>ANIMATE</button>
+<div id="box"></div>
+</body>
+</html>

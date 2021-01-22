@@ -1,0 +1,44 @@
+<html>
+<head>
+<style>
+select{
+height:40px;
+width:40%;
+font-size:19px;
+border-radius:5px;
+padding-left:20px;
+outline:none;
+}
+#box{
+height:470px;
+width:1050px;
+background:#ddd;
+border-radius:20px;
+margin:30px auto;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+var fname=["---SELECT FRUITS---","Apple","Blackberry","Banana","Pineapple","Stroberry","Lemon"];
+var fimg=["","im1.jpg","im2.jpg","im3.jpg","im4.jpg","im5.jpg","im6.jpg"];
+var ddl="<select>";
+$("#box").hide(10);
+for(i=0;i<fname.length;i++)
+{
+ddl+="<option value='"+fimg[i]+"'>"+fname[i]+"</option>";
+}
+$("p").html(ddl);
+$("select").change(function(){
+var path=$(this).val();
+alert(path);
+$("#box").show(10).css({background:"url('images/"+path+"')",backgroundSize:"100% 100%"});
+})
+})
+</script>
+</head>
+<body>
+<p></p>
+<div id="box"></div>
+</body>
+</html>

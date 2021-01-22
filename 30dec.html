@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+  function $(element_id)
+  {
+     return document.getElementById("name").value;
+  }
+
+  function vailidate()
+  {
+     //var txtv=document.getElementById("name").value
+	 var element_id=$('name');
+	 if(element_id=="")
+	 {
+	    alert ("Name is required !");
+		return false;
+	 }
+  }
+</script>
+</head>
+<body>
+<form action="output.php" onsubmit="return vailidate();">
+<input type="text" id="name"/><br/>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

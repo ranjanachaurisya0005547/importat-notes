@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+#txt1{
+height:600px;
+width:980px;
+border:10px double lime;
+background:linear-gradient(45deg,red,skyblue,red);
+text-align:center;
+line-height:500px;
+font-size:100px;
+}
+</style>
+<script>
+var arr=["HTML","PHP","C","JAVA","C#"];
+var c=["red","green","yellow","lime","purple"];
+
+var i=0;
+function changetxt()
+{
+   var d=document.getElementById("txt1");
+   d.innerHTML="<b style='color:"+c[i]+";'>"+arr[i]+"</b>";
+   i++;
+   if(i==arr.length)
+   i=0;
+}
+setInterval(changetxt,1000);
+</script>
+</head>
+<body>
+<div id="txt1"></div>
+</body>
+</html>

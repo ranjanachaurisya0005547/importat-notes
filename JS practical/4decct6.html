@@ -1,0 +1,51 @@
+<html>
+<head>
+<script>
+function demo()
+{
+ var txt=document.getElementById("txt");
+ var msg=document.getElementById("msg");
+ if(txt.value.length==5)
+ {
+   msg.innerText="Valid Pincode";
+   msg.style.color="green";
+   txt.style.border="2px solid green";
+ }
+ else
+ {
+   msg.innerText="Invalid Pincode";
+   msg.style.color="red";
+   txt.style.border="2px solid red";
+ }
+}
+function demo1()
+{
+ var txt=document.getElementById("txt1");
+ var msg=document.getElementById("msg1");
+ if(txt.value.length==6)
+ {
+   msg.innerText="Valid Pincode";
+   msg.style.color="green";
+   txt.style.border="2px solid green";
+ }
+ else
+ {
+   msg.innerText="Invalid Pincode";
+   msg.style.color="red";
+   txt.style.border="2px solid red";
+ }
+}
+
+
+</script>
+</head>
+<body>
+PINCODE:<br/>
+<input type="number" onkeypress="demo()" id="txt"/>
+<b id="msg"></b>
+BY USING 
+PINCODE:<br/>
+<input type="number" onkeyup="demo1()" id="txt1"/>
+<b id="msg1"></b>
+</body>
+</html>

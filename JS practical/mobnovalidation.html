@@ -1,0 +1,35 @@
+<!-- WAP to Check a given Mobile Number is Indian Mobile Number Or Not------->
+<html>
+<head>
+<script>
+function checkNo()
+{
+  
+  var mobno=document.getElementById("mobno").value;
+    if(mobno.length==10)
+  {
+    if(mobno.charAt(0)=="9"||mobno.charAt(0)==8||mobno.charAt(0)==7||mobno.charAt(0)==6)
+	{
+	   alert("Indian Mobile Number !");
+	}
+	else
+	{
+	   alert("Not An Indian Mobile Number !");
+	}
+  }
+  else
+  {
+   alert("Invalid Mobile Number !");
+  }
+
+  
+  
+}
+</script>
+</head>
+<body>
+Enter Your Mobile Number:<br/>
+<input type="number" id="mobno"/><br/><br/>
+<button onclick="checkNo()">Check Here</button>
+</body>
+</html>

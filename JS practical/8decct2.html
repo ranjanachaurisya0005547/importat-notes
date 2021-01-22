@@ -1,0 +1,29 @@
+<html>
+<head>
+<script>
+function demo(x)
+{
+   var str=x.value;
+   var arr=str.split('.');
+   var msg=document.getElementById("h");
+   var ext=arr.pop().toUpperCase();
+   if(ext=="JPG"||ext=="PNG"||ext=="JPEG")
+   {
+      msg.innerText="Vailid Captch";
+      msg.style.color="green";
+      x.style.border="2px solid green";	  
+   }
+   else
+   {
+     msg.innerText="Invailid Captcha";
+	 msg.style.color="red";
+	 x.style.border="2px solid red";
+   }
+}
+</script>
+</head>
+<body>
+<input type="file" onchange="demo(this)"/><br/><br/>
+<h1 id="h"></h1>
+</body>
+</html>

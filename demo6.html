@@ -1,0 +1,20 @@
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+var txt1=$("#h1").text();
+var txt2=$("#h2").text();
+$("#h1").text(txt2);
+$("#h2").text(txt1);
+})
+})
+</script>
+</head>
+<body>
+<h1 id="h1">WELOME</h1>
+<h1 id="h2">RANJANA</h1><br/>
+<button>SWAP TEXT</button>
+</body>
+</html>

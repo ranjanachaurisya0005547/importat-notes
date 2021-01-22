@@ -1,0 +1,640 @@
+Selector:
+selector is used to select a html element on the basis of id,class,tag name etc.
+
+Tag Selector:
+----------------
+Syntax:
+$("Tagname");
+
+Example:
+$("button");
+$("h1");
+==============================
+ID Selector:
+-----------
+Syntax:
+$("#IDNAME");
+
+Example:
+$("#txt");
+$("#h");
+===============================
+Class Selector:
+
+Syntax:
+$(".CLASS_NAME");
+
+Example:
+$(".txta");
+4(".btn");
+================================
+Group Selector:
+
+Syntax:
+$("#Idname,#Idname,.Classname,Tagname,Tagname,....");
+
+Example:
+$("#btn,.txt,h1,button");
+
+================================
+Compound Selector:
+
+Syntax:
+$("Groped element");
+
+Example:
+$(".menu ul li a");
+
+=================================
+Universal Selector:
+$("*");
+
+========================================================================================
+jQuery Events:
+
+ready event:
+click event:
+dblclick event:
+
+========================================================================================
+DOM ACCESSING:
+val():
+val function is used to set or get value of from control.
+
+Syntax of Value:
+var variable_name=$("selector").val();
+
+Example:
+<input type="text" id="txt"/>
+var txtv=$("#txt").val();
+
+Syntax of Set VAlue of Form Control:
+$("selector").val(value);
+
+Example:
+<input type="text" id="txt1"/>
+<input type="text" id="txt2"/>
+var v=$("#txt1").val();
+$("#txt2").val(v);
+
+OR
+$("#txt2").val("RANJANA");
+=======================================================================================
+text():
+text function is used to set/get normal text of selected html element.
+
+Syntax of get text:
+var txtv=#("selector").text();
+
+Example:
+var dvtxt=("#dv").text();
+----
+Syntax of set text:
+#("selector").text(value);
+
+Example:
+<div id="dv">HELLO </div>
+<h1 id="h"></h1>
+var dvtxt=("#dv").text();
+$("#h").text(dvtxt);
+OR
+$("#h").text("CONGRATULATIONS !");
+
+======================================================================================
+html:
+======================================================================================
+css():
+css function is used to set single or multiple css at a time based on css property and value.
+
+Single Css:
+-----------
+$("selector").css("propertyName","value");
+
+Example:
+<div id="dv"></div>
+$("#dv").css("height","200px");
+$("#dv").css("width","200px");
+$("#dv").css("background-color","lime");
+
+================
+Multiple Css:
+-----------
+$("selector").css({propertyName1:"value1",propertyName2:"value2",.....,propertyNameN:"valueN"});
+
+
+Example:
+<div id="dv"></div>
+$("#dv").css({height:"200px",width:"200px",backgroundColor:"lime",boxShadow:"0px 0px 2px red"});
+
+==============================================================================================
+attr():
+-------
+attr function is used to get/set attribute of selected html element.
+
+Syntax:
+Get:
+var variable_name=$("selector").attr("attribute_name");
+
+Example:
+<img src="path.png" id="img1"/>
+var path=$("#img1").attr("src");
+
+Set:
+Syntax:
+$("selector").attr("attribute_name","value");
+
+Example:
+<input type="checkbox"/>
+$("input").attr("type","text");
+=============================================================================================
+prop():
+prop function is used to get or set property of selected html element.
+
+Syntax:
+Get:
+----
+var variable_name=$("selector").prop();
+
+Set:
+----
+$("selector").prop("propertyName","value");
+
+=============================================================================================
+addClass():
+addClass function is used to add css class to the selected html element.
+
+Syntax:
+$("selector").addClass("className");
+
+Example:
+<style>
+.im{
+height:300px;
+
+}
+</style>
+$("img").addClass(".im");
+or
+$("img").addClass('.im');
+=============================================================================================
+removeClass():
+removeClass function is used to remove applied class from selectd html element.
+
+Syntax:
+
+$("selector").removeClass("className");
+
+
+============================================================================================
+toggleClass():
+toggleClass function is used to provide toggle between addClass and removeClass.
+
+Syntax:
+$("selector").toggleClass("className");
+
+============================================================================================
+hasClass():
+hasClass function is used to check defined class is added or not.
+its returns true if given class is added on selected html element otherwise returns false.
+
+
+Syntax:
+var variable_name=$("selector").hasClass("className");
+
+============================================================================================
+hide():
+hide function is used to hide a selected html element basis on the speed.
+
+Syntax:
+$("selector").hide(speed);
+
+speed value:
+1)"fast"
+2)"slow"
+3)"medium"
+4)Time in miliseconds like(2000)
+
+Example:
+--------
+$("div").hide("fast");
+$("div").hide(2000)
+============================================================================================
+show():
+show function is used show to show a selected html element based on tne speed.
+
+Syntax:
+$("selector").show(speed);
+
+Example:
+--------
+$("div")
+
+============================================================================================
+toggle():
+toggle function is used to toggle between hide and show function.
+
+
+Syntax:
+$("selector").toggle(speed);
+
+
+============================================================================================
+slideUp():
+
+Example:
+<html>
+<head>
+<style>
+img{
+height:200px;
+width:220px;
+border:2px solid lime;
+padding:10px;
+margin:20px;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("img").slideUp(2000);
+})
+
+$("#btn2").click(function(){
+$("img").slideDown(2000);
+})
+
+$("#btn3").click(function(){
+$("img").slideToggle(2000);
+})
+})
+</script>
+</head>
+<body>
+<center>
+<img src="images/p1.jpg"/>
+<img src="images/p3.jpg"/>
+<img src="images/p4.jpg"/>
+<img src="images/p5.jpg"/><br/><br/><br/><br/><br/>
+<button id="btn1">slideUp</button>
+<button id="btn2">slideDown</button>
+<button id="btn3">slideToggle</button>
+</center>
+</body>
+</html>
+=================================================================================================================
+slideDown():
+
+=================================================================================================================
+slideToggle():
+
+=========================
+fadeIn():
+fadeOut():
+fadeToggle():
+fadeTo():
+
+Example:
+<html>
+<head>
+<style>
+#box{
+height:300px;
+width:400px;
+background:lime;
+border:5px double purple;
+padding:20px;
+margin:20px 40px;
+float:left;
+}
+img{
+height:300px;
+width:400px;
+border:10px double maroon;
+padding:20px;
+float:right;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("#box").fadeIn("fast");
+$("img").fadeIn("slow");
+})
+
+$("#btn2").click(function(){
+$("#box").fadeOut(2000);
+$("img").fadeOut(3000);
+})
+
+$("#btn3").click(function(){
+$("#box").fadeToggle(3000);
+$("img").fadeToggle(4000);
+})
+
+$("#btn4").click(function(){
+$("#box").fadeTo(2000,.3);
+$("img").fadeTo(3000,.2);
+})
+})
+</script>
+</head>
+<body>
+<div id="box"></div>
+<img src="images/p5.jpg">
+<br/><br/><br/>
+<button id="btn1">fadeIn</button>
+<button id="btn2">fadeOut</button>
+<button id="btn3">fadeToggle</button>
+<button id="btn4">fadeTo</button>
+</body>
+</html>
+========================
+animation():
+animation function is used to create custom animation based on css property and value.
+
+Syntax:
+$("selector").animate({propertyName1:"value1",propertyName2:"value2",.......,propertyNameN:"valueN"},speed)
+
+Example:
+<html>
+<head>
+<style>
+#box{
+height:100px;
+width:100px;
+background:maroon;
+position:absolute;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$("#box").animate({border:"20px double hotpink",opacity:".4",right:"0px"},2000);
+$("#box").animate({bottom:"0px"},2000);
+$("#box").animate({left:"0px"},2000);
+$("#box").animate({top:"0px"},2000);
+})
+})
+</script>
+</head>
+<body>
+<button>ANIMATE</button>
+<div id="box"></div>
+</body>
+</html>
+===================================================================================================================
+append():
+prepend():
+after():
+before():
+
+1)append():
+append function is used to add content at the end of selected HTML element.
+
+Syntax:
+$("selector").append("Content_which_u_want_to_add");
+
+Example:
+$("div").append("<img src='images/p1.jpg'/>");
+
+===================================================================================================================
+prepend():
+prepend function is use to add content starting of the selected html element.
+
+Syntax:
+$("selector").prepend("Content_which_u_want_to_add");
+
+Example:
+$("div").prepend("<img src='images/p1.jpg'/>");
+==================================================================================================================
+
+after():
+after function is used to add content after selected html element.
+
+Syntax:
+$("selector").after("content");
+
+======================
+before():
+before function is used to add content before selected html element.
+
+Syntax:
+$("selector").before("content");
+
+==================================================================================================================
+empty():
+remove():
+parent():
+parents():
+children():
+eq():
+each():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

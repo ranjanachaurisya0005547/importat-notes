@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+#box{
+height:600px;
+width:1000px;
+}
+#txta{
+height:100px;
+width:30%;
+}
+</style>
+<script>
+function getColor()
+{
+  var str="0123456789abcdef";
+  var color="#";
+  for(i=1;i<=6;i++)
+  {
+    var rindex=Math.ceil((Math.random()*10)+5);
+	color+=str.charAt(rindex);
+  }
+  var txta=document.getElementById("txta");
+  txta.style.background=color;
+  txta.value=color;
+}
+function setColor()
+{
+  var tcolor=document.getElementById("txta").value;
+  document.getElementById("box").style.background=tcolor;
+}
+setInterval(getColor,1000);
+</script>
+</head>
+<body>
+<div id="box">
+<center>
+<textarea id="txta"></textarea><br/><br/>
+<button onclick="setColor()">SET STYLE</button>
+</center>
+</div>
+</body>
+</html>

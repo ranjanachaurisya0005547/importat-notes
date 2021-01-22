@@ -1,0 +1,40 @@
+<html>
+<head>
+<style>
+img{
+height:200px;
+width:220px;
+border:2px solid lime;
+padding:10px;
+margin:20px;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn1").click(function(){
+$("img").slideUp(2000);
+})
+
+$("#btn2").click(function(){
+$("img").slideDown(2000);
+})
+
+$("#btn3").click(function(){
+$("img").slideToggle(2000);
+})
+})
+</script>
+</head>
+<body>
+<center>
+<img src="images/p1.jpg"/>
+<img src="images/p3.jpg"/>
+<img src="images/p4.jpg"/>
+<img src="images/p5.jpg"/><br/><br/><br/><br/><br/>
+<button id="btn1">slideUp</button>
+<button id="btn2">slideDown</button>
+<button id="btn3">slideToggle</button>
+</center>
+</body>
+</html>

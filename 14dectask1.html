@@ -1,0 +1,26 @@
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+var res="<select>";
+$("li").each(function(){
+var x=$(this).text();
+res+="<option>"+x+"</option>";
+})
+res+="</select>";
+$("span").html(res);
+})
+</script>
+</head>
+<body>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JS</li>
+<li>jQuery</li>
+<li>BOOTSTRAP</li>
+</ul>
+<span></span>
+</body>
+</html>

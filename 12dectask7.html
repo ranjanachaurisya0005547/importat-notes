@@ -1,0 +1,46 @@
+<html>
+<head>
+<style>
+*{
+margin:20px auto;
+}
+#dv1{
+height:300px;
+width:300px;
+border:2px solid red;
+padding:50px;
+}
+#dv2{
+height:180px;
+width:180px;
+border:2px solid maroon;
+padding:50px;
+}
+#dv3{
+height:160px;
+width:160px;
+border:2px solid purple;
+background:hotpink;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#dv3").click(function(){
+$(this).parent().css({background:"yellow"});
+})
+
+$("#dv2").click(function(){
+$(this).parent().css({background:"lime"});
+})
+})
+</script>
+</head>
+<body>
+<div id="dv1">
+<div id="dv2">
+<div id="dv3"></div>
+</div>
+</div>
+</body>
+</html>

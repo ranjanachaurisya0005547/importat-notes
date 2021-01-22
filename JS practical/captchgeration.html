@@ -1,0 +1,47 @@
+<html>
+<head>
+<script>
+function cgeneration()
+{
+  var str="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var captch="";
+  for(i=1;i<=6;i++)
+  {
+    var rindex=Math.floor(Math.random()*63);
+    captch+=str.charAt(rindex);
+  }
+  document.getElementById("h").innerText=captch;
+  
+}
+function demo1()
+{
+ 
+ var ctxt=document.getElementById("txt");
+ var msg=document.getElementById("msg");
+ var c=document.getElementById("h").innerText;
+ 
+ if(ctxt.value==c)
+  {
+    msg.innerText="Valid Captcha";
+	msg.style.color="green";
+	ctxt.style.border="2px solid green";
+  }
+  else
+  {
+    msg.innerText="Invalid Captcha";
+	msg.style.color="red";
+	ctxt.style.border="2px solid red";
+  }
+}
+
+</script>
+</head>
+<body onload="cgeneration()">
+<center><h1>CAPTCHA GENERATION</h1></center>
+<input type="text" id="txt"><br/><br/>
+<i><s><b id="h" style="font-size:22px;"></b></s></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="images/refresh.jpg" height="30px" onclick="cgeneration()"/><br/><br>
+<h1 id="msg"></h1>
+<button onclick="demo1()">Click Here</button>
+</body>
+</html>

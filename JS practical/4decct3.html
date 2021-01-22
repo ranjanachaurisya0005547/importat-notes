@@ -1,0 +1,19 @@
+<html>
+<head>
+<script>
+function open1(x)
+{
+  window.open(x.value);
+}
+function close1()
+{
+  window.close();
+}
+</script>
+</head>
+<body>
+<input type="text" id="txt"/>
+<button onclick="open1(document.getElementById('txt'))">OPEN</button>
+<button onclick="close1()">CLOSE</button>
+</body>
+</html>

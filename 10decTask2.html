@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#ch").change(function(){
+var v=$("button").prop("disabled");
+if(v==true)
+$("button").prop("disabled",false);
+else
+$("button").prop("disabled",true);
+})
+})
+</script>
+</head>
+<body>
+<input type="checkbox" id="ch"/>
+I agreed <a href="#">Terms & Conditions</a>
+<button disabled>Save</button>
+</body>
+</html>

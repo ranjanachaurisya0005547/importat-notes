@@ -1,0 +1,539 @@
+1)onload event
+2)onclick
+3)ondblclick
+-----------------------
+getElementById():
+getElementById function is used to select html element on the basis of the id.
+Its is located on the document object and document is a built-in object of JS.
+getElemenById returns object is current object.
+
+Snytax:
+document.getElementById("Id_of_Html_Element");
+
+Example:
+<img src="image_path" id="im"/>
+documnet.getElemenById("im");
+=========================================================================================
+setInterval():
+setInterval Function is used toa block of code for every given time interval.
+setInterval function is located inside the window object.
+Snytax:
+window.setInterval(function_name,time_in_miliseconds);
+OR
+window.setInterval("function_name()",time_in_miliseconds);
+
+=========================================================================================
+setTimeout():
+setTimeout function is used to execute a block of code after given time.
+setTimeout function is also defined inside the window object.
+Syntax:
+window.setTimeout(function_name,time_in_miliseconds);
+OR
+window.setTimeout("function_name()",time_in_miliseconds);
+========================================================================================
+clearInterval():
+clearInterval function is used to clear the functionality of the setInterval.
+Its also defined inside the window object.
+Syntax:
+window.clearInterval(setInterval_variable_name);
+========================================================================================
+toFixed():tofixed() function is used to define the floating point value after the decimal
+point.We pass the floating point value inside the parentheses of the tofixed function.
+Example:
+res.innertText=result.toFixed(2);
+==========================================================================================
+Date():
+Date object provides some functions related current date and time.
+
+1.getDate()
+2.getMonth()
+3.getFullYear()
+4.getHours()
+5.getMinutes()
+6.getSeconds()
+
+------------------------------------------------------
+Syntax:
+first Create the Date() Object to access all the predefined methods.
+Like:
+var a=new Date();
+=>Now You can acces all the predefined methods which is defined inside the Date() object.
+====================================================================================
+Array In Javascript:
+In javascript,array is a collection of heterogenious datatypes element.
+Syntax:
+var arrayName=[item1,item2,---------,itemN];
+
+Example:
+var arr=["RAM",10,20.5,20,true,50,50];
+=======================================================================================
+onchange() Event:
+=======================================================================================
+Paramerized function:
+Syntax:
+function function_name(parameter1,parameter2,........,parameterN)
+{
+  //function block
+}
+
+Example:
+<script>
+function add(a,b,c,d)
+{
+  alert("RESULT IS: "+(a+b+c+d));
+}
+var n1=Number(prompt("Enter The First Number"));
+var n2=Number(prompt("Enter The Second Number"));
+var n3=Number(prompt("Enter The Third Number"));
+var n4=Number(prompt("Enter The Fourth Number"));
+add(n1,n2,n3,n4);
+</script>
+=========================================================================================
+Default Paramerized Function:
+In this function you can provide the value of the parameters before the calling of the 
+function,if you call a function without parameter then the default value of the parameter
+is used for the calling a function.Its not generate the error if u cann't provide the
+parameter at the calling of the function.
+Syntax:
+function function_name(parameter1=value1,parameter2=value2,......,parameterN=valueN)
+{
+ //function block
+}
+//function calling
+function_name();
+
+===========================================================================================
+this keyword:this keyword is used to send the object of current object(tag).
+===========================================================================================
+example:
+<html>
+<head>
+<script>
+function demo(x)
+{
+  x.src="images/p2.jpg";
+}
+</script>
+</head>
+<body>
+<img src="images/p1.jpg" height="300px" onmouseover="demo(this)"/>
+</body>
+</html>
+
+==========================================================================================
+confirm():
+=>confirm box is used to take confirmation with user based on the ok and cancel button.
+=>Its returns the boolean type value.
+=>Its returns true is user click on the ok button and returns false if user clicked on
+  the cancel button.
+Syntax:
+-------
+var variableName=confirm("Message");
+
+Example:
+<html>
+<head>
+<script>
+function demo()
+{
+ var a=confirm("Click onn the cancel or ok button !");
+ if(a==true)
+ alert("User Clicked On The Ok Button !");
+ else
+ alert("User Clicked On The Cancel Button !");
+}
+</script>
+</head>
+<body>
+<button onclick="demo()">CLICK HERE</button>
+</body>
+</html>
+========================================================================================
+open():
+
+Synatx:
+1)window.open("url");
+OR
+2)window.open("url","");
+=>"" means blank,and it is used to open a url in a new window otherwise its open a url in a
+ new tab by default.
+3)window.open("url","","height=value,width=value");
+height and width represent the height and width of the window.
+---------------
+close():its used to close the current tab of the window where its is opened.
+syntax:
+window.close();
+---------------------
+location:it is used to open an url at the current tab
+Syntax:
+window.location="url";
+OR
+window.location.href="url";
+Above both syntaxes are same.
+========================================================================================
+onkeypress Event:Its call any function before type the text of the key. So its length 
+is equal to the (length-1) of the text.
+------------
+onkeyup Event:It's call the function after type the text of the key.So its length is 
+equal to the length of the text.
+
+-------------
+onblur Event:
+-------------
+onfocus Event:
+=========================================================================================
+Math:
+math object provides some method related to mathemetical operation.
+
+1)random:
+=>random function is used to return random number between 0(inclusive) and 1(exclusive).
+=>random is located in the Math object.
+=>Its return the 0 or .9999999999... but its not return the 1.
+=>Syntax:
+Math.random();
+=====================================================================================
+2)floor():
+It's used  to return the lowest value of given number. 
+Syntax:
+Math.floor();
+--------------
+3)ceil():
+ceil() function is used to return the largest value of the given number.
+Syntax:
+Math.ceil();
+----------
+4)round():
+round() function is used to return the closet value of the given number.
+Syntax:
+Math.round();
+---------------------------
+sqrt():
+it is used to calculate the square root of given number.
+Its does not accept the negative value.
+its return NAN(not a number) if given number is negative.
+
+Synatx:
+Math.sqrt(value);
+
+Example:
+Math.sqrt(16)//return 4
+Math.sqrt(-16)//returns NAN value
+----------------------
+cbrt():
+cbrt function is used to calculate the cube root of the given value,and its also take a 
+negative value.
+
+Synatx:
+Math.cbrt();
+
+Example:
+Math.cbrt(27);//returns 3
+Math.cbrt(-27);//returns -3
+----------------------------------
+pow():pow function is used to calculate the power of given number.
+
+Synatx:
+Math.pow(x,y);
+Where x is the base value and y is the power of the base value.
+
+Example:
+Math.pow(3,5);//that's means 3 to the power of 5 then its return the 273
+-------------------------
+min():
+min function is used to find the mininum value of the given value.
+
+Synatx:
+Math.min(value1,value2,......,valueN);
+
+Example:
+Math.min(20,10,0,10,2,50);//returns 0
+Math.min(-1,49,20,0);//returns -1
+--------------------
+max():
+max function is used to find the maximum value of the given number.
+
+Syntax:
+Math.max(value1,value2,....,valueN);
+
+Example:
+Math.max(20,0,20,100);//returns 100
+-----------------
+sin():
+
+Syntax:
+Math.sin(value);
+cos():
+Math.cos(value);
+tan():
+Syntax:Math.tan(value);
+=========================================================================================
+String Functions:
+
+1)charAt():charAt function is used to return charecter  of a specified index in a 
+given string. 
+A string index is always start from zero,so first charecter is stored zeroth index and last
+charecter is stored at the length-1 index.
+
+Syntax:
+str_name.charAt(index_value);
+
+Example:
+var str="ranjana";
+str.charAt(3);//returns j
+str.charAt(str.length)//returns undefined
+-----------------------------------------------
+indexOf():indexOf function is used to return index of the first occurance charecter in
+given string.
+Its return -1 is specified charecter is not availabel in given the string.
+
+Syntax:
+str_name.indexOf('charecter_of_given_string_that's_u_want_tofind_index');
+OR
+str_name.indexOf('str_charecter',start_count_index);
+Example:
+var str="Techpile";
+str.indexOf('t');/returns -1
+str.indexOf('T');//returns 0
+str.indexOf('e');//returns 1;
+str.indexOf('Tech');//returns 0 
+str.indexOf('e',2);//return 7
+------------------
+lastIndexOf():
+------------------
+toUpperCase():toUpperCase function is used to convert a string into a uppercase
+letter.
+
+Syntax:
+str_name.toUpperCase();
+
+Example:
+var str="ranjana";
+str.toUpperCase();//return RANJANA
+---------------------------------
+toLowerCase():
+toLowerCase function is used to convert a given string into a lowercase letter.
+
+Syntax:
+strName.toLowerCase();
+
+Example:
+var str="RANJANA";
+var res=str.toLowerCase();//return ranjana
+---------------------------
+substr():substr function is used to fetch charecter of a string based on starting index
+and length.
+
+Syntax:
+strName.substr(strating_index,length_of_string);
+
+Example:
+var str="Techpile Technology";
+var res=str.substr(0,8);//returns Techpile
+var res=str.substr(2,2);//returns ch
+-------------------------
+substring():substring function is used to fetch a charecter of a string based on start index
+and end index.
+
+Syntax:
+strName.substring(start_index,end_index);
+
+Example:
+var str="Techpile Technology";
+var res=str.substring(2,7);//Returns chpil
+-------------------------------------
+split():
+split function is used to split a string into a array of sub split based on separator.
+
+Syntax:
+
+
+Example:
+var str1="Techpile Technology";
+var arr1=str1.split(' ');//return ["Techpile","Technology"]
+var arr2=str1.split('');//returns ["T","e","c","h","p","i","l","e"," ","T","e","c","h","n","o","l","o","g","y"]
+var arr3=str1.split('e');//return ["T","chpil","T","chnology"]
+
+-----------------------
+pop():
+
+Syntax:
+arrName.pop();
+
+-------------------------
+trim():
+trim function is used to remove left and right spaces from a sentence or a word.
+
+Syntax:
+strName.trim();
+
+Example:
+var str1="  ranjana ";
+str1.trim();//returns ranjana(without left and right spaces)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

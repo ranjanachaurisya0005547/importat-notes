@@ -1,0 +1,23 @@
+<html>
+<head>
+<style>
+#d1{
+height:200px;width:200px;
+background:hotpink;
+display:none;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+$("#d1").delay(2000).fadeIn(2000);
+})
+})
+</script>
+</head>
+<body>
+<button>DELAY METHOD</button>
+<div id="d1"></div>
+</body>
+</html>

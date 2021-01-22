@@ -1,0 +1,117 @@
+<html>
+<head>
+<style>
+
+td,th{
+height:50px;
+width:350px;
+text-align:center;
+font-size:22px;
+}
+button{
+height:40px;
+width:100px;
+font-size:19px;
+color:white;
+background:purple;
+border:none;
+outline:none;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+var res="<tr><td>Parul</td><td>IT</td><td>Lucknow</td><td>1234567890</td><td>DELETE</td></tr>";
+$("#btn1").click(function(){
+$("table").append(res);
+})
+
+$("#btn2").click(function(){
+$("table").prepend(res);
+})
+
+$("#btn3").click(function(){
+$("tr:eq(0)").after(res);
+})
+
+$("#btn4").click(function(){
+$("tr:eq(4)").before(res);
+})
+
+$("#btn5").click(function(){
+$("td").empty();
+})
+
+$("#btn6").click(function(){
+$("td").remove();
+})
+
+$("#btn7").click(function(){
+$("tr:first").css({background:"black",color:"white"});
+$("tr:even").css({background:"maroon",color:"white"});
+$("tr:odd").css({background:"orange",color:"white"});
+})
+
+$("#btn8").click(function(){
+window.location.href="12dectask6.html";
+})
+
+$(".del").click(function(){
+var a=confirm("Are u sure for delete !");
+if(a==true)
+$(this).parent().hide();
+})
+})
+</script>
+</head>
+<body>
+<table border="1">
+<tr>
+<th>NAME</th>
+<th>BRANCH</th>
+<th>CITY</th>
+<th>MOBILE NO</th>
+<th>DELETE</th>
+</tr>
+<tr>
+<td>RANJANA</td>
+<td>CS</td>
+<td>GORAKHPUR</td>
+<td>6307972183</td>
+<td class="del">DELETE</td>
+</tr>
+<tr>
+<td>WXYZ</td>
+<td>CS</td>
+<td>GORAKHPUR</td>
+<td>987654332</td>
+<td class="del">DELETE</td>
+</tr>
+<tr>
+<td>XYZ</td>
+<td>CS</td>
+<td>GORAKHPUR</td>
+<td>123456789</td>
+<td class="del">DELETE</td>
+</tr>
+<tr>
+<td>ABC</td>
+<td>CS</td>
+<td>GORAKHPUR</td>
+<td>1234567890</td>
+<td class="del">DELETE</td>
+</tr>
+</table>
+<center>
+<br/><br/><br/><br/><br/><br/><br/>
+<button id="btn1">append</button>
+<button id="btn2">prepend</button>
+<button id="btn3">after</button>
+<button id="btn4">before</button>
+<button id="btn5">empty</button>
+<button id="btn6">remove</button>
+<button id="btn7">Set Style</button>
+<button id="btn8">Reset</button>
+</center>
+</body>
+</html>

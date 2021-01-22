@@ -1,0 +1,19 @@
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#btn").click(function(){
+var txtv=$("#txt").val();
+$("#h").text(txtv);
+})
+})
+</script>
+</head>
+<body>
+Enter A String:<br/>
+<input type="text" id="txt"/><br/>
+<h1 id="h"></h1>
+<input type="button" id="btn" value="CLICK HERE"/>
+</body>
+</html>

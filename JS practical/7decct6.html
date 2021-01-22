@@ -1,0 +1,23 @@
+<html>
+<head>
+<script>
+function randomcolor()
+{
+  var str="0123456789abcdef";
+  var color="#";
+  for(i=1;i<=6;i++)
+  {
+    var rindex=Math.ceil((Math.random()*10)+5);
+	color+=str.charAt(rindex);
+  }
+  document.getElementById("txt").style.color=color;
+  window.setTimeout(randomcolor,1000);
+}
+//window.setInterval(randomcolor,1000);
+</script>
+</head>
+<body onload="randomcolor()">
+<br/><br/><br/><br/><br/><br/><br/>
+<center><h1 id="txt">RANJANA CHAURASIYA.....</h1></center>
+</body>
+</html>

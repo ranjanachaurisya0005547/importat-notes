@@ -1,0 +1,28 @@
+<html>
+<head>
+<style></style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("input").change(function(){
+var path=$(this).val();
+var ext=(path.substring(path.lastIndexOf('.')+1)).toUpperCase();
+if(ext=="PNG"||ext=="JPG"||ext=="JPEG")
+{
+  $("span").text("Valid File");
+  $("span").css("color","green").delay(2000).fadeOut(1000);
+}
+else
+{
+  $("span").text("Invalid File");
+  $("span").css("color","red").delay(2000).fadeOut(1000);
+}
+})
+})
+</script>
+</head>
+<body>
+<input type="file"/>
+<span></span>
+</body>
+</html>

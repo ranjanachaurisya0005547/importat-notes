@@ -1,0 +1,31 @@
+<html>
+<head>
+<style>
+div{
+ height:400px;
+ width:400px;
+ background:navy;
+ border:10px solid aqua;
+ float:left;
+ color:white;
+ margin:2px 10px;
+}
+</style>
+<script>
+function demo()
+{
+ var a=document.getElementById("box");
+ var b=document.getElementById("box1");
+ b.innerHTML=a.innerHTML;
+}
+</script>
+</head>
+<body>
+<div id="box">
+<br/><b>WELCOMETO WORLD OF JAVASCRIPT !</b><br/><br/><br/>
+<img src="images/p1.jpg" height="300px"/>
+</div>
+<div id="box1"></div><br/>
+<button onclick="demo()">CLICK HERE</button>
+</body>
+</html>

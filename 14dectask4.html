@@ -1,0 +1,19 @@
+<html>
+<head>
+<style></style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("input").change(function(){
+var x=$(this).val();
+$("img").css("height",x+"px");
+$("img").css("width",x+"px");
+})
+})
+</script>
+</head>
+<body>
+<img src="images/p1.jpg" height="100px" width="100px">
+<input type="range" min="100" max="300"/>
+</body>
+</html>

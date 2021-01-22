@@ -1,0 +1,40 @@
+<html>
+<head>
+<script>
+function showhidepass()
+{
+  var getpass=document.getElementById("pass");
+  var getbtn=document.getElementById("btn1");
+  
+  if(getpass.value!="")
+  {
+    if(getbtn.value=="SHOW")
+	{
+	  getbtn.value="HIDE";
+	  getpass.type="text";
+	  getbtn.style.background="green";
+	  getbtn.style.color="white";
+	  getbtn.style.borderRdius="20px";
+	}
+	else
+	{
+	  getbtn.value="SHOW";
+	  getpass.type="password";
+	  getbtn.style.background="orange";
+	  getbtn.style.color="white";
+	  getbtn.style.borderRdius="20px";
+	}
+  }
+  else
+  {
+    alert("Please Enter Your Password !");
+  }
+}
+</script>
+</head>
+<body>
+Password:<br/>
+<input type="password" id="pass"/><br/><br/>
+<input type="button" onclick="showhidepass()" id="btn1" value="SHOW"/>
+</body>
+</html>

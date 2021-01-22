@@ -1,0 +1,31 @@
+<html>
+<head>
+<script>
+var arr=["p1.jpg","p2.jpg","p3.jpg"];
+var i=0;
+function demo()
+{
+  var a=document.getElementById("im1");
+  a.src="images/"+arr[i];
+  i++;
+  if(i==arr.length)
+  i=0;
+ 
+}
+function start()
+{
+ a=setInterval(demo,1000);
+}
+function stop()
+{
+ clearInterval(a);
+}
+
+</script>
+</head>
+<body>
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+<img src="images/p1.jpg" id="im1" height="300px"/>
+</body>
+</html>

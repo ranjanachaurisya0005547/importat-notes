@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+function demo(x)
+{
+   var msg=document.getElementById("b1");
+   if(x.value==16)
+   {
+     msg.innerText="valid";
+	 msg.style.color="green";
+	 x.style.border="2px solid green";
+   }
+   else
+   {
+     msg.innerText="Invalid";
+	 msg.style.color="red";
+	 x.style.color="2px solid red";
+   }
+}
+</script>
+</head>
+<body>
+<input type="text" onblur="demo(this)" id="txt">
+<b id="b1"></b>
+</body>
+</html>

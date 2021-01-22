@@ -1,0 +1,19 @@
+<html>
+<head>
+<script>
+var arr=["Ranjana","rachna","rekha"];
+var i=0,res="<select onchange='msg()'>";
+for(i=0;i<arr.length;i++)
+{
+ res+="<option>"+arr[i]+"</option>";
+}
+res+="</select>";
+document.write(res);
+function msg()
+{
+  alert("Value is Changed !");
+}
+</script>
+</head>
+<body></body>
+</html>

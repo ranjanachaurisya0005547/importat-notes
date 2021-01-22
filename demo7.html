@@ -1,0 +1,25 @@
+<!---------swap two value of the html element-------->
+<html>
+<head>
+<style>
+
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("button").click(function(){
+var txt1="<s>"+$("#txt1").html()+"</s>";
+var txt2="<i><mark>"+$("#txt2").html()+"</mark></i>";
+$("#txt1").html(txt2);
+$("#txt2").html(txt1);
+})
+})
+</script>
+</head>
+<body>
+<h1 id="txt1">WELCOME RANJANA CHAURASIYA</h1>
+<h1 id="txt2">RANJANA CHAURASIYA...........</h1>
+<br/><br/>
+<button>SWAP TEXT</button>
+</body>
+</html>

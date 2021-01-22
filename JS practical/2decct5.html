@@ -1,0 +1,40 @@
+<html>
+<head>
+<style></style>
+<script>
+function demo()
+{
+  var s1=document.getElementById("ddl");
+  var res="<select>";
+  if(s1.value=="UP")
+  {
+     var ucities=["LUCKNOW","GORAKGPUR","KANPUR"];
+	 for(i=0;i<ucities.length;i++)
+	 {
+	   res+="<option>"+ucities[i]+"</option>";
+	 }
+	 res+="</select>";
+	 document.getElementById("p1").innerHTML=res;
+  }
+  if(s1.value=="MP")
+  {
+     var mcities=["A1","B1","C1"];
+	 for(i=0;i<mcities.length;i++)
+	 {
+	   res+="<option>"+mcities[i]+"</option>";
+	 }
+	 res+="</select>";
+	 document.getElementById("p1").innerHTML=res;
+  }
+}
+</script>
+</head>
+<body>
+<select id="ddl" onchange="demo()">
+<option>--Select Option--</option>
+<option>UP</option>
+<option>MP</option>
+</select>
+<p id="p1"></p>
+</body>
+</html>

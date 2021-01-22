@@ -1,0 +1,45 @@
+<html>
+<head>
+<style>
+.im1{
+transform:rotate(360deg);
+transition:all ease 2s;
+border:10px double purple;
+padding:10px;
+box-shadow:0px 0px 5px 6px black inset;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+$("#btn1").click(function(){
+$("img").addClass('im1');
+})
+
+$("#btn2").click(function(){
+$("img").removeClass('im1');
+})
+
+$("#btn3").click(function(){
+$("img").toggleClass('im1');
+})
+
+$("#btn4").click(function(){
+var res=$("img").hasClass('im1');
+alert(res);
+})
+})
+</script>
+</head>
+<body>
+<center>
+<img src="images/p5.jpg" height="300px"/>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<button id="btn1">ADD CLASS</button>
+<button id="btn2">REMOVE CLASS</button>
+<button id="btn3">TOGGLE CLASS</button>
+<button id="btn4">HAS CLASS</button>
+</center>
+</body>
+</html>

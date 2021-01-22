@@ -1,0 +1,42 @@
+<html>
+<head>
+<style>
+#register{
+ height:400px;
+ width:300px;
+ background:navy;
+ float:left;
+ display:none;
+}
+#login{
+height:400px;
+width:300px;
+float:left;
+background:purple;
+display:none;
+}
+</style>
+<script>
+function regi()
+{
+var a=document.getElementById("register");
+var a1=document.getElementById("login");
+a.style.display="block";
+a1.style.display="none";
+}
+function login()
+{
+var a=document.getElementById("register");
+var a1=document.getElementById("login");
+a.style.display="none";
+a1.style.display="block";
+}
+</script>
+</head>
+<body>
+<button onclick="regi()">Register</button>
+<button onclick="login()">Login</button><br/><br/><br/>
+<div id="register"></div>
+<div id="login"></div>
+</body>
+</html>

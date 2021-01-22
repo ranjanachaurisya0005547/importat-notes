@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+*{margin:0px;padding:0px;}
+.im1{
+  height:180px;
+  width:205px;
+  margin:0px 12px;
+  border:7px solid blue;
+  border-radius:20px;
+}
+#bim1{
+height:330px;
+width:960px;
+margin:6px 12px;
+border:7px solid blue;
+border-radius:20px;
+}
+#modal{
+height:100%;
+width:100%;
+background:rgba(0,0,0,.4);
+position:fixed;
+top:0px;
+display:none;
+}
+#inner{
+  height:500px;
+  width:500px;
+  background:white;
+  border-radius:10px;
+  border:6px solid blue;
+  margin:7% 25%;
+  padding:15px;
+}
+</style>
+<script>
+function demo(x)
+{
+  var m=document.getElementById("img1");
+  var modal=document.getElementById("modal");
+  modal.style.display="block";
+  m.src=x.src;
+}
+
+
+</script>
+<head>
+<body>
+<center><h1><u>IMAGE GALLERY</u></h1></center>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<img src="images/p5.jpg" onclick="demo(this)" class="im1"/>
+<img src="images/p2.jpg" onclick="demo(this)" class="im1"/>
+<img src="images/p3.jpg" onclick="demo(this)" class="im1"/>
+<img src="images/p4.jpg" onclick="demo(this)" class="im1"/>
+<div id="modal">
+<div id="inner">
+<a href="4decct4.html" style="color:red;font-size:30px;float:right;">X</a>
+<img src="images/p1.jpg" height="460px" id="img1" width="485px">
+</div>
+</div>
+</body>
+</html>

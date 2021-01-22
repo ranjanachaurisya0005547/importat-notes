@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+function demo(x)
+{
+  res="";
+  for(i=1;i<=x;i++)
+  {
+   res+=i*i*i+"<br/>";
+  }
+  document.getElementById("p1").innerHTML=res;
+}
+</script>
+</head>
+<body>
+<input type="text" id="txt1"/><br/>
+<p id="p1"></p>
+<input type="button" value="RESULT" 
+onclick="demo(Number(document.getElementById('txt1').value))" id="btn"/>
+</body>
+</html>
